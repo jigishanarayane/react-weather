@@ -7,7 +7,7 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  const apiKey = '42c678b8240f1357d274795fdf4fbb4d';
+  const apiKey = process.env.REACT_APP_API_KEY;
 
   async function getWeather() {
     if (city.trim() === '') return;
